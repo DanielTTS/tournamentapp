@@ -6,7 +6,8 @@ class App extends React.Component{
         this.state = {
           playerArr:['Herc','Daniel','Megan','Vanessa','Kat','Jordan','Ben','Corey','Darnel','Greg','Mike','Ange'],
           winnerArr:['Ben','Jordan'],
-
+          player1: "",
+          player2: ""
         }
     }
 
@@ -19,18 +20,21 @@ class App extends React.Component{
     }
 
 componentDidMount(){
-let popPlayer =  this.getPlayer()
-  console.log(popPlayer);
-
-}
+  let popPlayer1 =  this.getPlayer()
+  let popPlayer2 =  this.getPlayer()
+  this.setState({
+    player1:popPlayer1,
+    player2: popPlayer2
+  })
+  }
 
     render(){
-      // put js herege
+      // put js here
 
 
         return(
             <div>
-              {this.state.playerArr}
+              {this.state.player1} VS {this.state.player2}
             </div>
 
         )
